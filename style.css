@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Jua', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  letter-spacing: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+.color_blue {
+  color: #007BFF;
+}
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 5px 10px 2px #5592d333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  z-index: 2;
+  background-color: #fff;
+}
+
+.headerLogo {
+  display: inline;
+  color: #1F538A;
+}
+
+.headerMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerMenu > li:hover{
+  cursor: pointer;
+}
+
+section {
+  margin-top: 100px;
+  height: calc(100vh - 100px);
+  position: relative;
+}
+
+.home, .try {
+  background-color: #93BCE8;
+}
+
+.imageCopyright {
+  display: none;
+}
+
+.previewContentProfileWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.previewContentProfileImage {
+  border-radius: 100%;
+}
+
+.previewContentPImage {
+  width: 100%;
+  height: 100%;
+}
+
+.previewContentImageWrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.tryImage {
+  width: 100%;
+  height: 100%;
+}
+
+.tryContentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tryContent {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 #1F538A;
+}
+
+.tryButton {
+  border-radius: 20px;
+  background-color: #5592D3;
+  color: #fff;
+  border: none;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.tryButton:hover {
+  background-color: #1F538A;
+}
+
+footer {
+  background-color: #1F538A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerGithub {
+  color: #eee;
+}
+
+@media(min-width: 768px) {
+  header {
+    padding: 0 100px;
+  }
+
+  .headerLogo {
+    font-size: 40px;
+  }
+
+  .headerMenu {
+    font-size: 30px;
+    width: 400px;
+  }
+
+  /* section */
+  .homeImage {
+    width: 900px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: -100px;
+    transform:translateY(-50%);
+  }
+
+  .homeTitle {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform:translateY(-50%);
+    font-size: 4rem;
+  }
+
+  .preview {
+    padding-top: 100px;
+  }
+
+  .previewContentWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .previewContent {
+    width: 28%;
+    height: 500px;
+    border-radius: 10px;
+    border: 10px solid #93BCE8;
+    border-bottom-width: 50px;
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  .previewContentProfileNickname {
+    padding-left: 20px;
+    font-size: 2.3rem;
+  }
+
+  .previewContentProfileImage {
+    width: 70px;
+    height: 70px;
+  }
+
+  .previewContentP {
+    padding-top: 20px;
+    font-size: 2rem;
+  }
+
+  .previewContentPrevButton {
+    display: none;
+  }
+
+  .previewContentNextButton {
+    display: none;
+  }
+
+  .previewTitle {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 100px;
+  }
+
+  .trytitleWrapper {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+  }
+  
+  .tryTitle {
+    font-size: 50px;
+  }
+
+  .tryButtonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .tryButton {
+    width: 300px;
+    height: 80px;
+    font-size: 40px;
+  }
+
+  .tryContentWrapper {
+    gap: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10%;
+  }
+
+  .tryContent {
+    width: 355px;
+    height: 200px;
+  }  
+
+  footer {
+    height: 100px;
+  }
+}
+
+
+/* 모바일 */
+@media (min-width: 320px) and (max-width: 768px) {
+  header {
+    height: 80px;
+    padding: 0 20px;
+  }
+
+  .headerLogo {
+    font-size: 32px;
+  }
+
+  .headerMenu {
+    font-size: 18px;
+    width: 200px;
+  }
+
+  /* section */
+  section {
+    height: calc(100vh - 80px);
+    margin-top: 80px;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homeImage {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+  }
+
+  .homeTitle {
+    position: absolute;
+    bottom: 100px;
+    font-size: 25px;
+  }
+
+  .preview {
+    padding-top: 80px;
+  }
+
+  .previewContentActullaySeen {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .previewContentWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: transform 0.3s ease;
+  }
+
+  .previewContent {
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    border: 10px solid #93BCE8;
+    border-bottom-width: 50px;
+    padding: 10px;
+  }
+
+  .previewContentProfileNickname {
+    padding-left: 20px;
+  }
+
+  .previewContentProfileImage {
+    width: 70px;
+    height: 70px;
+  }
+
+  .previewContentP {
+    padding-top: 20px;
+    font-size: 1.3rem;
+  }
+
+  .previewContentImageWrapper {
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+
+  .previewContentPrevButton {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+  }
+
+  .previewContentNextButton {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+  }
+
+  .previewContentNextButton:hover {
+    cursor: pointer;
+  }
+
+  .previewContentPrevButton > svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .previewContentNextButton > svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .previewTitle {
+    text-align: center;
+    font-size: 30px;
+    padding: 100px 15% 0;
+  }
+
+  .try {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .trytitleWrapper {
+    text-align: center;
+  }
+  
+  .tryTitle {
+    font-size: 25px;
+  }
+
+  .tryButtonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .tryButton {
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+  }
+
+  .tryContentWrapper {
+    gap: 20px;
+  }
+
+  .tryContent {
+    width: 210px;
+    height: 130px; 
+  }
+
+  footer {
+    height: 80px;
+  }
+}
